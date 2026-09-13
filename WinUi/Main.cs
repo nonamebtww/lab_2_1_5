@@ -1,0 +1,43 @@
+using System;
+using System.Windows.Forms;
+using WinUi.Pages;
+
+namespace WinUi {
+public partial class Main : Form {
+  public Main() {
+    InitializeComponent();
+    
+    box_page.Items.AddRange(new object[] {
+      "Задание 1",
+      "Задание 2",
+      "Задание 3"
+    });
+  }
+  
+  private void box_page_SelectedIndexChanged(object sender, EventArgs e) {
+    var box = (ComboBox)sender;
+    
+    switch (box.SelectedIndex) {
+      case 0:
+        ShowPage(new Task1Page());
+        break;
+      case 1:
+        ShowPage(new Task2Page());
+        break;
+      case 2:
+        ShowPage(new Task3Page());
+        break;
+    }
+  }
+
+  #region Helpers
+
+  private void ShowPage(UserControl page) {
+    body.Controls.Clear();
+    body.Controls.Add(page);
+    page.Dock = DockStyle.Fill;
+  }
+
+  #endregion
+}
+}
