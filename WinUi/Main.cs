@@ -12,6 +12,8 @@ public partial class Main : Form {
       "Задание 2",
       "Задание 3"
     });
+    
+    ShowPage(new HomePage());
   }
   
   private void box_page_SelectedIndexChanged(object sender, EventArgs e) {

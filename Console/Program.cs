@@ -1,109 +1,49 @@
-using System;
+using FunctionsTask1 = Task1.Functions;
+using FunctionsTask2 = Task2.Functions;
+using FunctionsTask3 = Task3.Functions;
 
 namespace Console {
 internal class Program {
-  
-  #region Task 1
-
-  // Поменять в слове первую и последнюю буквы
-  private static string Task1(string word) {
-    if (string.IsNullOrEmpty(word) || word.Length < 2) {
-      return word;
-    }
-
-    var chars = word.ToCharArray();
-
-    (chars[0], chars[chars.Length - 1]) = (chars[chars.Length - 1], chars[0]);
-
-    return new string(chars);
-  }
 
   private static void Task1Ui() {
     System.Console.Write("Введите слово: ");
-    var word = System.Console.ReadLine();
 
-    var result = Task1(word);
-
-    System.Console.WriteLine("Результат: " + result);
-  }
-
-  #endregion
-
-  #region Task 2
-
-  // Удалить первую и последнюю буквы у слов,
-  // отличных от последнего слова
-  private static string Task2(string text) {
-    var words = text.TrimEnd('.').Split(
-      new[] {
-        ' '
-      },
-      StringSplitOptions.RemoveEmptyEntries
+    var result = FunctionsTask1.ReplaceFirstAndLastLetters(
+      System.Console.ReadLine() ?? string.Empty
     );
-
-    if (words.Length < 2) {
-      return string.Empty;
+    
+    if (result == null) {
+      System.Console.WriteLine("Введено неверное значение!");
+      return;
     }
 
-    var last_word = words[words.Length - 1];
-    var result = string.Empty;
-
-    for (var i = 0; i < words.Length - 1; i++) {
-      if (words[i] == last_word) {
-        continue;
-      }
-
-      if (words[i].Length <= 2) {
-        continue;
-      }
-
-      var word = words[i].Substring(
-        1,
-        words[i].Length - 2
-      );
-
-      result += word + Environment.NewLine;
-    }
-
-    return result.TrimEnd();
+    System.Console.WriteLine($"Результат: {result}");
   }
 
-  // Заменить большие латинские буквы на маленькие
   private static void Task2Ui() {
     System.Console.Write("Введите последовательность слов: ");
-    var text = System.Console.ReadLine();
 
-    var result = Task2(text);
+    var result = FunctionsTask2.ModifySentence(
+      System.Console.ReadLine() ?? string.Empty
+    );
 
-    System.Console.WriteLine("Результат:");
-    System.Console.WriteLine(result);
-  }
+    if (result == null) {
+      System.Console.WriteLine("Введено неверное значение!");
+      return;
+    }
 
-  #endregion
-
-  #region Task 3
-
-  private static string Task3(string text) {
-    var chars = text.ToCharArray();
-
-    for (var i = 0; i < chars.Length; i++)
-      if (chars[i] >= 'A' && chars[i] <= 'Z') {
-        chars[i] = (char)(chars[i] + ('a' - 'A'));
-      }
-
-    return new string(chars);
+    System.Console.WriteLine($"Результат: {result}");
   }
 
   private static void Task3Ui() {
     System.Console.Write("Введите текст: ");
-    var text = System.Console.ReadLine();
 
-    var result = Task3(text);
+    var result = FunctionsTask3.ReplaceUpperWithLower(
+      System.Console.ReadLine() ?? string.Empty
+    );
 
-    System.Console.WriteLine("Результат: " + result);
+    System.Console.WriteLine($"Результат: {result}");
   }
-
-  #endregion
   
   private static void Main(string[] args) {
     while (true) {
@@ -118,9 +58,7 @@ internal class Program {
         "Выбор: "
       );
       
-      var raw_action = System.Console.ReadLine();
-
-      if (!int.TryParse(raw_action, out var action)) {
+      if (!int.TryParse(System.Console.ReadLine(), out var action)) {
         System.Console.WriteLine("Введно неверное значение!");
         continue;
       }

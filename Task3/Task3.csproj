@@ -5,14 +5,15 @@
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{2E1C22AF-31B3-46D0-A492-93B1CB4674D7}</ProjectGuid>
-        <OutputType>Exe</OutputType>
+        <ProjectGuid>{31A2692C-430E-4EFB-8383-2E8DA4ADA88E}</ProjectGuid>
+        <OutputType>Library</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>Console</RootNamespace>
-        <AssemblyName>Console</AssemblyName>
+        <RootNamespace>Task3</RootNamespace>
+        <AssemblyName>Task3</AssemblyName>
         <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
-        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <LangVersion>8</LangVersion>
+        <Nullable>enable</Nullable>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <PlatformTarget>AnyCPU</PlatformTarget>
@@ -40,22 +41,8 @@
         <Reference Include="System.Xml"/>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Program.cs"/>
+        <Compile Include="Functions.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
-    </ItemGroup>
-    <ItemGroup>
-      <ProjectReference Include="..\Task1\Task1.csproj">
-        <Project>{38b860df-501f-427a-9e4e-9b22c6a0caef}</Project>
-        <Name>Task1</Name>
-      </ProjectReference>
-      <ProjectReference Include="..\Task2\Task2.csproj">
-        <Project>{efa60498-7e81-4b4c-9a16-d81a0fba19eb}</Project>
-        <Name>Task2</Name>
-      </ProjectReference>
-      <ProjectReference Include="..\Task3\Task3.csproj">
-        <Project>{31a2692c-430e-4efb-8383-2e8da4ada88e}</Project>
-        <Name>Task3</Name>
-      </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -117,12 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lbl_task.Text" xml:space="preserve">
-    <value>Дана последовательность, содержащая от 2 до 30 слов, в каждом из
-которых от 2 до 10 латинских букв; между соседними словами -- не
-менее одного пробела, за последним словом -- точка. Напечатать все
-слова, отличные от последнего слова, предварительно преобразовав
-каждое из них по следующему правилу: удалить из слова первую и
-последнюю буквы;</value>
-  </data>
 </root>

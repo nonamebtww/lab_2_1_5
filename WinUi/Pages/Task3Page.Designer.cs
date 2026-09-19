@@ -23,8 +23,9 @@ partial class Task3Page {
         this.layout = new System.Windows.Forms.TableLayoutPanel();
         this.text_input = new System.Windows.Forms.TextBox();
         this.lbl_result = new System.Windows.Forms.Label();
-        this.lbl_result_title = new System.Windows.Forms.Label();
         this.lbl_input = new System.Windows.Forms.Label();
+        this.lbl_result_title = new System.Windows.Forms.Label();
+        this.lbl_task = new System.Windows.Forms.Label();
         this.layout.SuspendLayout();
         this.SuspendLayout();
         // 
@@ -35,70 +36,87 @@ partial class Task3Page {
         this.layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
         this.layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
         this.layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-        this.layout.Controls.Add(this.text_input, 2, 1);
-        this.layout.Controls.Add(this.lbl_result, 2, 2);
-        this.layout.Controls.Add(this.lbl_result_title, 1, 2);
-        this.layout.Controls.Add(this.lbl_input, 1, 1);
+        this.layout.Controls.Add(this.lbl_result_title, 1, 3);
+        this.layout.Controls.Add(this.lbl_result, 2, 3);
+        this.layout.Controls.Add(this.lbl_input, 1, 2);
+        this.layout.Controls.Add(this.text_input, 2, 2);
+        this.layout.Controls.Add(this.lbl_task, 1, 1);
         this.layout.Dock = System.Windows.Forms.DockStyle.Fill;
         this.layout.Location = new System.Drawing.Point(0, 0);
         this.layout.Name = "layout";
-        this.layout.RowCount = 4;
-        this.layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-        this.layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-        this.layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-        this.layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-        this.layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-        this.layout.Size = new System.Drawing.Size(792, 437);
+        this.layout.RowCount = 5;
+        this.layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+        this.layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+        this.layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+        this.layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+        this.layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+        this.layout.Size = new System.Drawing.Size(400, 225);
         this.layout.TabIndex = 0;
         // 
         // text_input
         // 
         this.text_input.Anchor = System.Windows.Forms.AnchorStyles.None;
-        this.text_input.Location = new System.Drawing.Point(442, 153);
+        this.text_input.Location = new System.Drawing.Point(203, 102);
         this.text_input.Name = "text_input";
-        this.text_input.Size = new System.Drawing.Size(142, 20);
+        this.text_input.Size = new System.Drawing.Size(114, 20);
         this.text_input.TabIndex = 2;
         this.text_input.TextChanged += new System.EventHandler(this.text_input_TextChanged);
         // 
         // lbl_result
         // 
-        this.lbl_result.Anchor = System.Windows.Forms.AnchorStyles.None;
         this.lbl_result.AutoSize = true;
+        this.lbl_result.Dock = System.Windows.Forms.DockStyle.Fill;
         this.lbl_result.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-        this.lbl_result.Location = new System.Drawing.Point(513, 263);
+        this.lbl_result.Location = new System.Drawing.Point(203, 135);
         this.lbl_result.Name = "lbl_result";
-        this.lbl_result.Size = new System.Drawing.Size(0, 18);
+        this.lbl_result.Size = new System.Drawing.Size(114, 45);
         this.lbl_result.TabIndex = 5;
+        this.lbl_result.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // lbl_input
+        // 
+        this.lbl_input.AutoSize = true;
+        this.lbl_input.Dock = System.Windows.Forms.DockStyle.Fill;
+        this.lbl_input.Location = new System.Drawing.Point(83, 90);
+        this.lbl_input.Name = "lbl_input";
+        this.lbl_input.Size = new System.Drawing.Size(114, 45);
+        this.lbl_input.TabIndex = 1;
+        this.lbl_input.Text = "Введите текст:";
+        this.lbl_input.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
         // lbl_result_title
         // 
         this.lbl_result_title.Anchor = System.Windows.Forms.AnchorStyles.None;
         this.lbl_result_title.AutoSize = true;
-        this.lbl_result_title.Location = new System.Drawing.Point(245, 266);
+        this.lbl_result_title.Location = new System.Drawing.Point(109, 151);
         this.lbl_result_title.Name = "lbl_result_title";
         this.lbl_result_title.Size = new System.Drawing.Size(62, 13);
         this.lbl_result_title.TabIndex = 4;
         this.lbl_result_title.Text = "Результат:";
         // 
-        // lbl_input
+        // lbl_task
         // 
-        this.lbl_input.Anchor = System.Windows.Forms.AnchorStyles.None;
-        this.lbl_input.AutoSize = true;
-        this.lbl_input.Location = new System.Drawing.Point(235, 157);
-        this.lbl_input.Name = "lbl_input";
-        this.lbl_input.Size = new System.Drawing.Size(83, 13);
-        this.lbl_input.TabIndex = 1;
-        this.lbl_input.Text = "Введите текст:";
+        this.layout.SetColumnSpan(this.lbl_task, 2);
+        this.lbl_task.Dock = System.Windows.Forms.DockStyle.Fill;
+        this.lbl_task.Location = new System.Drawing.Point(83, 45);
+        this.lbl_task.Name = "lbl_task";
+        this.lbl_task.Size = new System.Drawing.Size(234, 45);
+        this.lbl_task.TabIndex = 6;
+        this.lbl_task.Text = "Заменить в тексте все большие латинские буквы на маленькие.";
+        this.lbl_task.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
         // Task3Page
         // 
+        this.AutoSize = true;
+        this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
         this.Controls.Add(this.layout);
         this.MinimumSize = new System.Drawing.Size(400, 225);
         this.Name = "Task3Page";
-        this.Size = new System.Drawing.Size(792, 437);
+        this.Size = new System.Drawing.Size(400, 225);
         this.layout.ResumeLayout(false);
         this.layout.PerformLayout();
         this.ResumeLayout(false);
     }
+    private System.Windows.Forms.Label lbl_task;
 }
 }
