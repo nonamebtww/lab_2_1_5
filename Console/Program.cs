@@ -12,7 +12,7 @@ internal class Program {
       System.Console.ReadLine() ?? string.Empty
     );
     
-    if (result == null) {
+    if (string.IsNullOrEmpty(result)) {
       System.Console.WriteLine("Введено неверное значение!");
       return;
     }
@@ -27,7 +27,7 @@ internal class Program {
       System.Console.ReadLine() ?? string.Empty
     );
 
-    if (result == null) {
+    if (string.IsNullOrEmpty(result)) {
       System.Console.WriteLine("Введено неверное значение!");
       return;
     }

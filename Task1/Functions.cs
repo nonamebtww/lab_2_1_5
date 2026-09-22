@@ -1,8 +1,7 @@
-#nullable enable
 namespace Task1 {
 public static class Functions {
   // Поменять в слове первую и последнюю буквы
-  public static string? ReplaceFirstAndLastLetters(string word) {
+  public static string ReplaceFirstAndLastLetters(string word) {
     if (string.IsNullOrEmpty(word) || word.Length < 2 || word.Contains(" ")) {
       return null;
     }

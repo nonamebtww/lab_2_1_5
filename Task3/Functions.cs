@@ -4,8 +4,8 @@ public static class Functions {
   public static string ReplaceUpperWithLower(string text) {
     var chars = text.ToCharArray();
 
-    for (var i = 0; i < chars.Length; i++)
-      if (chars[i] >= 'A' && chars[i] <= 'Z') {
+    for (var i = 0; i < text.Length; i++)
+      if (text[i] >= 'A' && chars[i] <= 'Z') {
         chars[i] = (char)(chars[i] + ('a' - 'A'));
       }
 
