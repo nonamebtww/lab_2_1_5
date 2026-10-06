@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using FunctionsTask2 = Task2.Functions;
 
-namespace WinUi.Pages {
+namespace Task2WinForms {
 public partial class Task2Page : UserControl {
   public Task2Page() {
     InitializeComponent();

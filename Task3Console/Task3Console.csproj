@@ -5,14 +5,13 @@
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{2E1C22AF-31B3-46D0-A492-93B1CB4674D7}</ProjectGuid>
-        <OutputType>Exe</OutputType>
+        <ProjectGuid>{784F5CB8-D95F-4ED8-A606-A9F7BE8AE60B}</ProjectGuid>
+        <OutputType>Library</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>Console</RootNamespace>
-        <AssemblyName>Console</AssemblyName>
+        <RootNamespace>Task3Console</RootNamespace>
+        <AssemblyName>Task3Console</AssemblyName>
         <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
-        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <PlatformTarget>AnyCPU</PlatformTarget>
@@ -40,21 +39,13 @@
         <Reference Include="System.Xml"/>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Program.cs"/>
+        <Compile Include="Ui.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\Task1Console\Task1Console.csproj">
-        <Project>{e562306e-c295-4870-bbe5-615fcd8e174a}</Project>
-        <Name>Task1Console</Name>
-      </ProjectReference>
-      <ProjectReference Include="..\Task2Console\Task2Console.csproj">
-        <Project>{a440c06f-c216-4612-8786-62d9f840ddc4}</Project>
-        <Name>Task2Console</Name>
-      </ProjectReference>
-      <ProjectReference Include="..\Task3Console\Task3Console.csproj">
-        <Project>{784f5cb8-d95f-4ed8-a606-a9f7be8ae60b}</Project>
-        <Name>Task3Console</Name>
+      <ProjectReference Include="..\Task3\Task3.csproj">
+        <Project>{31a2692c-430e-4efb-8383-2e8da4ada88e}</Project>
+        <Name>Task3</Name>
       </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>

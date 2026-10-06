@@ -58,37 +58,10 @@
         <Compile Include="Pages\HomePage.Designer.cs">
           <DependentUpon>HomePage.cs</DependentUpon>
         </Compile>
-        <Compile Include="Pages\Task1Page.cs">
-          <SubType>UserControl</SubType>
-        </Compile>
-        <Compile Include="Pages\Task1Page.Designer.cs">
-          <DependentUpon>Task1Page.cs</DependentUpon>
-        </Compile>
-        <Compile Include="Pages\Task2Page.cs">
-          <SubType>UserControl</SubType>
-        </Compile>
-        <Compile Include="Pages\Task2Page.Designer.cs">
-          <DependentUpon>Task2Page.cs</DependentUpon>
-        </Compile>
-        <Compile Include="Pages\Task3Page.cs">
-          <SubType>UserControl</SubType>
-        </Compile>
-        <Compile Include="Pages\Task3Page.Designer.cs">
-          <DependentUpon>Task3Page.cs</DependentUpon>
-        </Compile>
         <Compile Include="Program.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
         <EmbeddedResource Include="Pages\HomePage.resx">
           <DependentUpon>HomePage.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="Pages\Task1Page.resx">
-          <DependentUpon>Task1Page.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="Pages\Task2Page.resx">
-          <DependentUpon>Task2Page.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="Pages\Task3Page.resx">
-          <DependentUpon>Task3Page.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>
@@ -113,13 +86,25 @@
         <None Include="App.config"/>
     </ItemGroup>
     <ItemGroup>
+      <ProjectReference Include="..\Task1WinForms\Task1WinForms.csproj">
+        <Project>{8a3756f0-6d56-4a72-8f77-ff6cd69adbd9}</Project>
+        <Name>Task1WinForms</Name>
+      </ProjectReference>
       <ProjectReference Include="..\Task1\Task1.csproj">
         <Project>{38b860df-501f-427a-9e4e-9b22c6a0caef}</Project>
         <Name>Task1</Name>
       </ProjectReference>
+      <ProjectReference Include="..\Task2WinForms\Task2WinForms.csproj">
+        <Project>{0decb61a-82df-419f-b2f3-2a805ebe40b8}</Project>
+        <Name>Task2WinForms</Name>
+      </ProjectReference>
       <ProjectReference Include="..\Task2\Task2.csproj">
         <Project>{efa60498-7e81-4b4c-9a16-d81a0fba19eb}</Project>
         <Name>Task2</Name>
+      </ProjectReference>
+      <ProjectReference Include="..\Task3WinForms\Task3WinForms.csproj">
+        <Project>{63bc8621-c9f0-4b45-808f-5535760185f9}</Project>
+        <Name>Task3WinForms</Name>
       </ProjectReference>
       <ProjectReference Include="..\Task3\Task3.csproj">
         <Project>{31a2692c-430e-4efb-8383-2e8da4ada88e}</Project>

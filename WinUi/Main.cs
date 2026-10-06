@@ -1,5 +1,8 @@
 using System;
 using System.Windows.Forms;
+using Task1WinForms;
+using Task2WinForms;
+using Task3WinForms;
 using WinUi.Pages;
 
 namespace WinUi {

@@ -1,4 +1,4 @@
-﻿namespace WinUi.Pages
+﻿namespace Task1WinForms
 {
     partial class Task1Page
     {
